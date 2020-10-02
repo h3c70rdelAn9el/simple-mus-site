@@ -9,7 +9,7 @@ import Hero from '@/components/Hero'
 
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'David Montes'
   },
   components: {
     Hero
