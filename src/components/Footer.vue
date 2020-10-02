@@ -1,0 +1,28 @@
+<template>
+  <div class="flex text-gray-100 h-20 p-2 justify-between bg-gray-800">
+    <div class="footer-left text-2xl text-green-400 ml-4 font-title">
+      <p>&copy; 2020 David Montes</p>
+      <p class=" text-xs">
+        -- images from unsplash! --logo from logomrk.com
+      </p>
+    </div>
+    <div class="footer-right pt-2 flex justify-between">
+      <div class="text-gray-100 text-2xl mr-6">
+        <a class=" " href="">
+          <font-awesome class="text-gray-200 hover:text-green-400" :icon="['fab', 'twitter-square']" />
+        </a>
+      </div>
+      <!-- instagram -->
+      <div class="text-white text-2xl mr-6">
+        <a class="h-10" href="">
+          <font-awesome :icon="['fab', 'instagram']" class="  rounded text-gray-200 hover:text-green-400" />
+        </a>
+      </div>
+      <div class="hover:text-gray-800 text-2xl mr-3">
+        <a  href="">
+          <font-awesome :icon="['fab', 'facebook-square']" class="hover:text-green-400 text-gray-200" />
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
