@@ -4,7 +4,9 @@
       <div>
         <!-- TODO: TURN LOGO INTO AN SVG FILE TO COTNROL COLOR -->
         <!-- TODO: CHECK THE OUTLINE SHADOW -->
-        <img class="w-50 h-16" src="../assets/img/dmonteslogo.png" alt="">
+        <g-link to="/">
+          <img class="w-50 h-16" src="../assets/img/dmonteslogo.png" alt="">
+        </g-link>
       </div>
       <div class="sm:hidden">
         <button type="button" class="text-gray-300 hover:text-white focus:text-white focus:outline-none" @click="isOpen = !isOpen">
