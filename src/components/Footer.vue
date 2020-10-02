@@ -3,7 +3,7 @@
     <div class="footer-left text-2xl text-green-400 ml-4 font-title">
       <p>&copy; 2020 David Montes</p>
       <p class=" text-xs">
-        -- images from unsplash! --logo from logomrk.com
+        -- images from <a href="https://unsplash.com" target="_blank">unsplash!</a>  --logo from <a href="https://logomakr.com" target="_blank">logomrk.com</a> 
       </p>
     </div>
     <div class="footer-right pt-2 flex justify-between">
