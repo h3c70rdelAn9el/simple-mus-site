@@ -1,11 +1,11 @@
 <template>
   <Layout>
-    <div class="h-full text-gray-100 bg-gray-700">
-      <h1 class="text-5xl text-center text-green-400 font-title">
+    <div class="h-screen text-gray-100 bg-gray-700">
+      <h1 class="text-5xl text-center  text-green-400 font-title">
         Bio
       </h1>
       <!-- main container -->
-      <div class="md:flex md:justify-between md:pt-4 ">
+      <div class="md:flex md:justify-between md:pt-4 animate__animated animate__fadeIn">
         <!-- top/right container -->
         <div class="md:pt-10 md:pl-8 lg:pl-10 ">
           <img class="h-64 sm:h-xl mx-auto rounded-full object-cover shadow-xl mb-6 md:w-75 md:h-xl lg:h-xl " src="../assets/img/sitting.jpg" alt="">
