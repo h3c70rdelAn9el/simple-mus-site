@@ -7,12 +7,18 @@
       <p class="text-sm text-center mx-auto">
         My apoligies, music to come shortly.
       </p>
+      <Youtube />
     </div>
   </Layout>
 </template>
 
 <script>
+import Youtube from '@/components/Youtube'
+
 export default {
+  components: {
+    Youtube
+  }
   // TODO: look at todos
   // look at todos below
 }

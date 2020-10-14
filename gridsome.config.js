@@ -12,7 +12,9 @@ if (process.env.NODE_ENV === 'production')
 
 module.exports = {
   siteName: 'Musician Gridsome',
-  plugins: [],
+  plugins: [
+   
+  ],
   css: {
     loaderOptions: {
       postcss: {
