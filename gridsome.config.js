@@ -12,14 +12,17 @@ if (process.env.NODE_ENV === 'production')
 
 module.exports = {
   siteName: 'Musician Gridsome',
-  plugins: [
-   
-  ],
+  plugins: [],
   css: {
     loaderOptions: {
       postcss: {
-        plugins: postcssPlugins
-      }
-    }
-  }
+        plugins: postcssPlugins,
+      },
+    },
+  },
+  chainWebpack: (config) => {
+    const svgRule = config.module.rule('svg')
+    svgRule.uses.clear()
+    svgRule.use('vue-svg-loader').loader('vue-svg-loader')
+  },
 }

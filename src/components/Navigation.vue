@@ -1,11 +1,13 @@
 <template>
-<nav class="bg-gray-600 relative z-20 shadow-outline sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center">
+<nav class="bg-gray-700 relative z-20 shadow-lg sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center">
   <div class="flex w-full items-center justify-between px-4 py-3 sm:p-0">
     <div>
       <!-- TODO: TURN LOGO INTO AN SVG FILE TO CONTROL COLOR -->
       <g-link to="/">
-        <img class="w-50 h-16" src="../assets/img/dmonteslogo.png" alt="">
+        <!-- <img class="w-50 h-16" src="../assets/img/dmonteslogo.png" alt=""> -->
+        <dlogo />
       </g-link>
+
     </div>
     <div class="sm:hidden">
       <button type="button" class="text-gray-300 hover:text-white focus:text-white focus:outline-none" @click="isOpen = !isOpen">
@@ -53,6 +55,8 @@
 </template>
 
 <script>
+import dlogo from '@/assets/svgs/dlogo.svg'
+
 export default {
   name: 'Nav',
   data() {
@@ -60,6 +64,9 @@ export default {
       isOpen: false,
       isHidden: false
     }
+  },
+  components: {
+    dlogo
   }
 }
 </script>
