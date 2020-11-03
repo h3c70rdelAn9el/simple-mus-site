@@ -2,12 +2,9 @@
 <nav class="bg-gray-700 relative z-20 shadow-lg sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center">
   <div class="flex w-full items-center justify-between px-4 py-3 sm:p-0">
     <div>
-      <!-- TODO: TURN LOGO INTO AN SVG FILE TO CONTROL COLOR -->
       <g-link to="/">
-        <!-- <img class="w-50 h-16" src="../assets/img/dmonteslogo.png" alt=""> -->
         <dlogo />
       </g-link>
-
     </div>
     <div class="sm:hidden">
       <button type="button" class="text-gray-300 hover:text-white focus:text-white focus:outline-none" @click="isOpen = !isOpen">
@@ -28,6 +25,9 @@
       <g-link to="/music" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
         Music
       </g-link>
+      <g-link to="/calendar" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
+        Events
+      </g-link>
       <g-link to="/contact" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
         Contact
       </g-link>
@@ -45,6 +45,9 @@
       </g-link>
       <g-link to="/music" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
         Music
+      </g-link>
+      <g-link to="/calendar" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
+        Events
       </g-link>
       <g-link to="/contact" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
         Contact
@@ -70,16 +73,3 @@ export default {
   }
 }
 </script>
-
-<style>
-/* .g-link-exact-active {
-    border: 1px solid black;
-  } */
-.sidebar {
-  /*
-  position: fixed;
-  z-index: 100;
-  background-color: black
-  */
-}
-</style>
