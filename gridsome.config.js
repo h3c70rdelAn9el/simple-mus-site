@@ -12,11 +12,11 @@ const postcssPlugins = [
   autoprefixer(),
 ]
 
-class TailwindExtractor {
-  static extract(content) {
-    return content.match(/[A-Za-z0-9-_:\/]+/g) || []
-  }
-}
+// class TailwindExtractor {
+//   static extract(content) {
+//     return content.match(/[A-Za-z0-9-_:\/]+/g) || []
+//   }
+// }
 
 
 module.exports = {
@@ -24,20 +24,17 @@ module.exports = {
   plugins: [
    { 
     use: 'gridsome-plugin-tailwindcss',
-    options: {
-      shouldPurge: false
-    }
   }
   ],
-  css: {
-    loaderOptions: {
-      postcss: {
-        plugins: 
-          postcssPlugins,
-          tailwindcss
-      },
-    },
-  },
+  // css: {
+  //   loaderOptions: {
+  //     postcss: {
+  //       plugins: 
+  //         postcssPlugins,
+  //         tailwindcss
+  //     },
+  //   },
+  // },
   // chainWebpack: (config) => {
   //   const svgRule = config.module.rule('svg')
   //   svgRule.uses.clear()
@@ -70,56 +67,54 @@ module.exports = {
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
     svgRule.use('vue-svg-loader').loader('vue-svg-loader')
-    config.module
-      .rule('css')
-      .oneOf('normal')
-      .use('postcss-loader')
-      .tap((options) => {
-        options.plugins.unshift(
-          ...[
-            require('postcss-import'),
-            require('postcss-nested'),
-            require('tailwindcss'),
-          ]
-        )
+    // config.module
+    //   .rule('css')
+    //   .oneOf('normal')
+    //   .use('postcss-loader')
+    //   .tap((options) => {
+    //     options.plugins.unshift(
+    //       ...[
+    //         require('postcss-import'),
+    //         require('postcss-nested'),
+    //         require('tailwindcss'),
+    //       ]
+    //     )
+    //     if (process.env.NODE_ENV === 'production')
+    //     postcssPlugins.push(purgecss(purgecssConfig))
 
-        if (
-          process.env
-            .NODE_ENV ===
-          'production'
-        ) {
-          options.plugins.push(
-            ...[
-              require('@fullhuman/postcss-purgecss')(
-                {
-                  content: [
-                    'src/assets/**/*.css',
-                    'src/**/*.vue',
-                    'src/**/*.js',
-                  ],
-                  extractors: [
-                    {
-                      extractor: TailwindExtractor,
-                      extensions: [
-                        'css',
-                        'vue',
-                        'js',
-                      ],
-                    },
-                  ],
-                  whitelist: [
-                    'svg-inline--fa',
-                  ],
-                  whitelistPatterns: [
-                    /shiki/,
-                    /fa-$/,
-                  ],
-                }
-              ),
-            ]
-          )
-        }
-        return options
-      })
+        // if (process.env.NODE_ENV === 'production') {
+        //   options.plugins.push(
+        //     ...[
+        //       require('@fullhuman/postcss-purgecss')(
+        //         {
+        //           content: [
+        //             'src/assets/**/*.css',
+        //             'src/**/*.vue',
+        //             'src/**/*.js',
+        //           ],
+        //           // extractors: [
+        //           //   {
+        //           //     extractor: TailwindExtractor,
+        //           //     extensions: [
+        //           //       'css',
+        //           //       'vue',
+        //           //       'js',
+        //           //     ],
+        //           //   },
+        //           // ],
+        //           // whitelist: [
+        //           //   'svg-inline--fa',
+        //           // ],
+        //           // whitelistPatterns: [
+        //           //   /shiki/,
+        //           //   /fa-$/,
+        //           // ],
+        //         }
+        //       ),
+        //     ]
+        //   )
+        // }
+        // return options
+      // })
   }
 }
