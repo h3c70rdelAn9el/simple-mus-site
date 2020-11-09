@@ -1,5 +1,6 @@
 <template>
 <Layout>
+  <!--
   <div class="bg-gradient-to-bl from-blue-500 via-red-900 to-black ">
     <h1 class="text-5xl text-center text-yellow-700 font-title">
       Get in Touch
@@ -49,6 +50,20 @@
         </div>
       </form>
 
+    </div>
+  </div>
+  -->
+  <div class="bg-gradient-to-bl from-blue-500 via-red-900 to-black h-screen ">
+    <h1 class="text-5xl text-center text-yellow-700 font-title">
+      Get in Touch
+    </h1>
+    <div class="animate__animated animate__fadeIn">
+      <p class="text-gray-100 p-8">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, fugiat? Qui doloremque fugiat natus omnis quibusdam culpa voluptatem magnam illo!
+      </p>
+    </div>
+    <div class="flex">
+      <button class="border m-auto border-black text-gray-800 rounded-md p-1 bg-yellow-600 hover:bg-gray-400">Email me</button>
     </div>
   </div>
 </Layout>

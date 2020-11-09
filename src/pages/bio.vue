@@ -1,6 +1,6 @@
 <template>
 <Layout>
-  <div class="h-full text-gray-100 bg-gray-700">
+  <div class="h-screen text-gray-100 bg-gray-700">
     <h1 class="text-5xl text-center  text-yellow-700 font-title">
       Bio
     </h1>

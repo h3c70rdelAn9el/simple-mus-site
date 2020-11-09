@@ -23,32 +23,28 @@
       <button class="px-2 border rounded hover:bg-blue-400" @click="prev">prev</button>
       <button class="px-2 border rounded hover:bg-blue-400" @click="next">next</button>
     </section>
-    <table class="table-auto mx-auto my-4 w-2/3">
-      <thead class="bg-gray-200 rounded">
-        <tr>
-          <th class="px-4 py-2 text-center">Venue</th>
-          <th class="px-4 py-2">City/Country</th>
-          <th class="px-4 py-2">Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="px-4 py-2 text-center">Paladium</td>
-          <td class="px-4 py-2 text-center">Los Angeles/US</td>
-          <td class="px-4 py-2 text-center">11/4/2020</td>
-        </tr>
-        <tr>
-          <td class="px-4 py-2 text-center">Glass House</td>
-          <td class="px-4 py-2 text-center">Pomona/US</td>
-          <td class="px-4 py-2 text-center">11/20/2020</td>
-        </tr>
-        <tr>
-          <td class="px-4 py-2 text-center">Artie's</td>
-          <td class="px-4 py-2 text-center">San Francisco/US</td>
-          <td class="px-4 py-2 text-center">12/8/2020</td>
-        </tr>
-      </tbody>
-    </table>
+    <hr>
+    <div class="w-full flex mt-4 mb-4">
+      <table class="table-auto w-2/3 mx-auto">
+        <thead>
+          <tr class="mx-2 bg-gray-300">
+            <th class="px-4 py-2 text-center">Venue</th>
+            <th class="px-4 py-2 text-center">City</th>
+            <th class="px-4 py-2 text-center">Country</th>
+            <th class="px-4 py-2 text-center">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="row in rows" class="p-2">
+            <td class="px-4 py-2 text-center">{{ row.venue }}</td>
+            <td class="px-4 py-2 text-center">{{ row.city }}</td>
+            <td class="px-4 py-2 text-center">{{ row.country }}</td>
+            <td class="px-4 py-2 text-center">{{ row.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
   </div>
 </Layout>
 </template>
@@ -61,6 +57,31 @@ export default {
       currentMonth: new Date().getMonth(),
       days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
       currentYear: new Date().getFullYear(),
+      rows: [{
+          venue: "Glass House",
+          city: "Pomona",
+          country: "US",
+          date: '12/20/2020'
+        },
+        {
+          venue: "Country Club",
+          city: "Los Angeles",
+          country: "US",
+          date: '1/4/2021'
+        },
+        {
+          venue: "CBGB's",
+          city: "New York City",
+          country: "US",
+          date: '1/10/2021'
+        },
+        {
+          venue: "Fred's",
+          city: "New York City",
+          country: "US",
+          date: '1/14/2021'
+        },
+      ]
     }
   },
   methods: {
@@ -101,6 +122,12 @@ export default {
       return new Date(this.currentYear, this.currentMonth).toLocaleString('default', {
         month: 'long'
       });
+    },
+    "columns": function columns() {
+      if (this.rows.length == 0) {
+        return [];
+      }
+      return Object.keys(this.rows[0])
     }
   },
 }

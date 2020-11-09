@@ -65,11 +65,17 @@ export default {
   data() {
     return {
       isOpen: false,
-      isHidden: false
+      isHidden: false,
     }
   },
   components: {
-    dlogo
-  }
+    dlogo,
+  },
 }
 </script>
+
+<style scoped>
+a.active--exact.active {
+  background-color: #B7791F;
+}
+</style>
