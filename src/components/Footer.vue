@@ -10,18 +10,18 @@
     <div class="footer-right flex justify-between">
       <div class="text-gray-100 text-2xl mr-6">
         <a class=" " href="">
-          <font-awesome class="text-gray-200 hover:text-yellow-700" :icon="['fab', 'twitter-square']" />
+          <fa class="text-gray-200 hover:text-yellow-700" :icon="['fab', 'twitter-square']" />
         </a>
       </div>
       <!-- instagram -->
       <div class="text-white text-2xl mr-6">
         <a class="h-10" href="">
-          <font-awesome :icon="['fab', 'instagram']" class="  rounded text-gray-200 hover:text-yellow-700" />
+          <fa :icon="['fab', 'instagram']" class="  rounded text-gray-200 hover:text-yellow-700" />
         </a>
       </div>
       <div class="hover:text-gray-800 text-2xl mr-3">
         <a href="">
-          <font-awesome :icon="['fab', 'facebook-square']" class="hover:text-yellow-700 text-gray-200" />
+          <fa :icon="['fab', 'facebook-square']" class="hover:text-yellow-700 text-gray-200" />
         </a>
       </div>
     </div>
