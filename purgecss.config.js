@@ -15,6 +15,7 @@ module.exports = {
     "g-image",
     "g-image--lazy",
     "g-image--loaded",
+    "fa"
   ],
   extractors: [
     {
