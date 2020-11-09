@@ -13,12 +13,12 @@ if (process.env.NODE_ENV === 'production')
 module.exports = {
   siteName: 'Musician Gridsome',
   plugins: [
-  //  { 
-  //   use: 'gridsome-plugin-tailwindcss',
-  //   options: {
-  //     shouldPurge: false
-  //   }
-  // }
+   { 
+    use: 'gridsome-plugin-tailwindcss',
+    options: {
+      shouldPurge: false
+    }
+  }
   ],
   css: {
     loaderOptions: {
