@@ -3,7 +3,11 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: [
+    {
+      enabled: false,
+    }
+  ],
   theme: {
     fontFamily: {
       sans: ["Niramit", "Sans-serif"],

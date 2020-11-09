@@ -4,11 +4,16 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 const tailwind = require('tailwindcss')
+const autoprefixer = require('autoprefixer')
 const purgecss = require('@fullhuman/postcss-purgecss')
-const postcssPlugins = [tailwind()]
+const purgecssConfig = require('./purgecss.config')
+const postcssPlugins = [
+  tailwind(),
+  autoprefixer(),
+]
 
 if (process.env.NODE_ENV === 'production')
-  postcssPlugins.push(purgecss(require('./purgecss.config.js')))
+  postcssPlugins.push(purgecss(purgecssConfig))
 
 module.exports = {
   siteName: 'Musician Gridsome',
