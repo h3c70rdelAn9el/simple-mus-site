@@ -36,21 +36,9 @@
 
   <!-- Overlay -->
   <button v-if="isOpen" class="fixed z-100 inset-0 h-full w-full bg-black cursor-default" @click="isOpen = false">
-    <div :class="isOpen ? 'block' : 'hidden'" class="sidebar relative px-2 pt-2 pb-4 sm:flex bg-black z-100 sm:p-0">
-      <g-link to="/" class="block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800">
-        Home
-      </g-link>
-      <g-link to="/bio" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
-        Bio
-      </g-link>
-      <g-link to="/music" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
-        Music
-      </g-link>
-      <g-link to="/calendar" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
-        Events
-      </g-link>
-      <g-link to="/contact" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
-        Contact
+    <div :class="isOpen ? 'block' : 'hidden'" class="sidebar relative px-2 pt-2 pb-4 sm:flex bg-black z-100 sm:p-0" v-for="route in links" :key="route.id">
+      <g-link :to="`${route.url}`" class="block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800">
+        {{ route.name }}
       </g-link>
     </div>
   </button>
@@ -66,6 +54,28 @@ export default {
     return {
       isOpen: false,
       isHidden: false,
+      links: [
+        {
+          name: 'Home',
+          url: '/'
+        },
+        {
+          name: 'Bio',
+          url: '/bio'
+        },
+        {
+          name: 'Music',
+          url: '/music'
+        },
+        {
+          name: 'Events',
+          url: '/calendar'
+        },
+        {
+          name: 'Contact',
+          url: '/contact'
+        },
+      ]
     }
   },
   components: {
